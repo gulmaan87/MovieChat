@@ -17,9 +17,7 @@ export default function TypeWriter({ text, speed = 18, onComplete, className = "
 
   useEffect(() => {
     // Reset on new text
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDisplayed("");
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDone(false);
     indexRef.current = 0;
 

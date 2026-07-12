@@ -9,7 +9,7 @@ RUN apt-get update && \
 # Install Docker CLI and Docker Compose
 RUN apt-get install -y docker.io docker-compose
 
-# Ensure docker group exists and add jenkins to it
-RUN groupadd -f docker && usermod -aG docker jenkins
+# Ensure docker group exists and add jenkins to it and the root group (for docker.sock access)
+RUN groupadd -f docker && usermod -aG docker,root jenkins
 
 USER jenkins
