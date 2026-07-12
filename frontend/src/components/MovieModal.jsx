@@ -8,7 +8,9 @@ export default function MovieModal({ movieId, onClose, isInWatchlist, onToggleWa
 
   useEffect(() => {
     if (!movieId) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setError(false);
     getMovieDetails(movieId)
       .then((data) => { setMovie(data); setLoading(false); })
